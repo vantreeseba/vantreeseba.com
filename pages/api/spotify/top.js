@@ -1,6 +1,8 @@
 import spotifyApi from '../../../lib/spotify';
 
 export default async(_, res) => {
+  await spotifyApi.refreshAccessToken();
+
   return spotifyApi.getMyTopTracks({ limit: 8 })
     .then(function(data) {
       res.setHeader('Cache-Control', 'max-age=0, s-maxage=86400');

@@ -11,10 +11,10 @@ function getCurrentlyPlaying({data, error}) {
   let content;
   if(error) {
     content = 'Error.' 
-  } else if(!data || !data.item){
+  } else if(!data){
     content = <Loading />;
   } else {
-    const {name, artists} = data.item;
+    const {name, artists} = data.item || {};
     content = name ? name + ' by ' + artists.map(a => a.name).join(', ') : 'N/A';
   }
   return buildContent({'Now playing': content}, styles);
