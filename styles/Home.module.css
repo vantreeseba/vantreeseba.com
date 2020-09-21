@@ -2,32 +2,23 @@
   min-height: 100vh;
   padding: 0 var(--default-padding);
   display: grid;
-  grid-template-areas: 
-    "hd"
-    "mc"
-    "mc"
-    "mc"
-    "mc"
-    "mc"
-    "ft";
+  grid-template-rows: 100px auto 100px; 
 }
 
 .header {
-  grid-area: hd;
   place-self: center;
   padding: var(--default-padding);
 }
 
 .main {
-  grid-area: mc;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   place-items: stretch;
+  place-content: start;
 }
 
 .footer {
-  grid-area: ft;
   place-items: center;
   text-align: center;
 }

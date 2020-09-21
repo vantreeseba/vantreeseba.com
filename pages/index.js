@@ -21,11 +21,3 @@ export default function Home() {
     </div>
   )
 }
-        // <Module title="Twitter" title2="@vantreeseba" footer="test">
-        //   This is a test.
-        //   Does it work well?
-        // </Module>
-        // <Module title="Soundcloud" footer="test">
-        //   This is a test.
-        //   Does it work well?
-        // </Module>
