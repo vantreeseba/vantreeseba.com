@@ -22,8 +22,8 @@
   color: var(--base03);
 }
 
-.module:hover .title2 {
-  color: var(--var-color);
+.title2:hover {
+  color: var(--base0D);
 }
 
 .content {

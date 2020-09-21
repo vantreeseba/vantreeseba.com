@@ -25,6 +25,7 @@
   --class-color:  var(--base08);
   --var-color:    var(--base09);
   --string-color: var(--base0B);
+  --keyword-color:var(--base0D);
 
   --color0:       var( --base00 ); 
   --color1:       var( --base08 );

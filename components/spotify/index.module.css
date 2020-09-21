@@ -1,0 +1,33 @@
+.content {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: 2fr 4fr;
+  grid-gap: calc(var(--default-padding)/4);
+}
+
+.key, .value {
+  padding:  calc(var(--default-padding)/8);
+}
+
+.key {
+  color: var(--base0E);
+}
+
+.key::after {
+  content: ':';
+}
+
+.value {
+  color: var(--string-color);
+}
+
+.artist {
+  color: var(--keyword-color);
+}
+
+.by {
+  color: var(--base03);
+}
+.track {
+  color: var(--string-color);
+}

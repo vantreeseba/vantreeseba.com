@@ -1,15 +1,15 @@
 import styles from './index.module.css'
 
-const Module = ({title = 'Module', title2, footer ='', children}) => (
+const Module = ({title = 'Module', username, url, footer ='', children}) => (
   <div className={styles.module}>
     <div className={styles.header}>
       {title} 
       <span className={styles.divider}>
-        {title2 ? ' | ' : ''}
+        {username ? ' | ' : ''}
       </span>
-      <span className={styles.title2}>
-        {title2 ? title2 : ''}
-      </span>
+      <a href={url} className={styles.title2}>
+        {username ? username : ''}
+      </a>
     </div>
     <div className={styles.content}>
       {children}

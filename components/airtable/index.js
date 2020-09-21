@@ -4,12 +4,10 @@ import styles from './index.module.css';
 import Module from '../module/';
 import Loading from '../loading';
 
-import {buildContent} from '../../lib/utils';
-
 const fetcher = url => fetch(url).then(r => r.json());
 
 export default function Github() {
-  const { data, error } = useSWR('/api/github', fetcher);
+  const { data, error } = useSWR('/api/airtable/', fetcher);
   let content;
 
   if(error) {
@@ -17,20 +15,13 @@ export default function Github() {
   } else if(!data){
     content = <Loading />;
   } else {
-    content = buildContent({
-      Company: data.data.company,
-      Location: data.data.location,
-      'Public Repos': data.data.public_repos,
-      Followers: data.data.followers,
-    }, styles);
+    content = buildContent(data.data);
   }
 
 
   return (
     <Module 
-      title="Github" 
-      username="@vantreeseba"
-      url="https://github.com/vantreeseba"
+      title="Media To Consume" 
     >
       <div className={styles.content}>
         {content}

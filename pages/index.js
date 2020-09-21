@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css';
 import Module from '../components/module/';
 import Github from '../components/github/';
+import Spotify from '../components/spotify/';
 
 export default function Home() {
   return (
@@ -11,14 +12,7 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <Github />
-        <Module title="Twitter" title2="@vantreeseba" footer="test">
-          This is a test.
-          Does it work well?
-        </Module>
-        <Module title="Soundcloud" footer="test">
-          This is a test.
-          Does it work well?
-        </Module>
+        <Spotify />
       </main>
 
       <footer className={styles.footer}>
@@ -27,3 +21,11 @@ export default function Home() {
     </div>
   )
 }
+        // <Module title="Twitter" title2="@vantreeseba" footer="test">
+        //   This is a test.
+        //   Does it work well?
+        // </Module>
+        // <Module title="Soundcloud" footer="test">
+        //   This is a test.
+        //   Does it work well?
+        // </Module>
