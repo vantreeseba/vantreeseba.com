@@ -27,7 +27,7 @@ function getTopTracks({data, error}) {
   } else if(!data){
     content = <Loading />;
   } else {
-    content = data.items.map(track => {
+    content = (data.items || []).map(track => {
       return (
         <div className={styles.value}>
           <span className={styles.track}>{track.name}</span>
@@ -45,9 +45,9 @@ function getTopTracks({data, error}) {
 
 export default function Github() {
   const listeningData = useSWR('/api/spotify/listening', fetcher, {refreshInterval: 30000 });
-  // const topData = useSWR('/api/spotify/top', fetcher);
+  const topData = useSWR('/api/spotify/top', fetcher);
   const listening = getCurrentlyPlaying(listeningData);
-  const top = ''; //getTopTracks(topData);
+  const top = getTopTracks(topData);
 
   return (
     <Module 

@@ -1,7 +1,7 @@
-import spotifyApi from '../../../lib/spotify';
+import spotifyApi, { refreshToken } from '../../../lib/spotify';
 
 export default async(_, res) => {
-  await spotifyApi.refreshAccessToken();
+  await refreshToken();
 
   return spotifyApi.getMyTopTracks({ limit: 8 })
     .then(function(data) {
