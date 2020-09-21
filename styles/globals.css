@@ -1,9 +1,56 @@
+:root {
+  --default-padding: 1em;
+  --base00 :#272822; /* Black */
+  --base01 :#383830; /* Dark Gray */ 
+  --base02 :#49483e; /* Gray */
+  --base03 :#75715e; /* Light Gray */ 
+  --base04 :#a59f85; /* Dark White */
+  --base05 :#f8f8f2; /* White */
+  --base06 :#f5f4f1; /* White */
+  --base07 :#f9f8f5; /* Light White */
+  --base08 :#f92672; /* Dark Red */ 
+  --base09 :#fd971f; /* Orange */
+  --base0A :#f4bf75; /* Light Orange */
+  --base0B :#a6e22e; /* Green */
+  --base0C :#a1efe4; /* Cyan */ 
+  --base0D :#66d9ef; /* Blue */
+  --base0E :#ae81ff; /* Purple */
+  --base0F :#cc6633; /* Dark Orange */
+
+  --foreground:   var( --base05 );
+  --background:   var( --base00 );
+  --bg-secondary: var( --base01 );
+  --cursorColor:  var( --base05 );
+
+  --class-color:  var(--base08);
+  --var-color:    var(--base09);
+  --string-color: var(--base0B);
+
+  --color0:       var( --base00 ); 
+  --color1:       var( --base08 );
+  --color2:       var( --base0B );
+  --color3:       var( --base0A );
+  --color4:       var( --base0D );
+  --color5:       var( --base0E );
+  --color6:       var( --base0C );
+  --color7:       var( --base05 );
+  --color8:       var( --base03 );
+  --color9:       var( --base09 );
+  --color10:      var( --base01 );
+  --color11:      var( --base02 );
+  --color12:      var( --base04 );
+  --color13:      var( --base06 );
+  --color14:      var( --base0F );
+  --color15:      var( --base07 );
+}
+
 html,
 body {
+  background-color: var(--background);
+  color: var(--foreground);
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: monospace, Inconsolata;
 }
 
 a {
