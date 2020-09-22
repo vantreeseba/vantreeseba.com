@@ -15,7 +15,15 @@ function getCurrentlyPlaying({data, error}) {
     content = <Loading />;
   } else {
     const {name, artists} = data.item || {};
-    content = name ? name + ' by ' + artists.map(a => a.name).join(', ') : 'N/A';
+    if(name) {
+      content = (<div className={styles.value}>
+        <span className={styles.track}>{name}</span>
+        <span className={styles.by}>{' by ' }</span>
+        <span className={styles.artist}>{artists.map(a => a.name).join(', ')}</span>
+      </div>);
+    } else {
+      content = 'N/A';
+    }
   }
   return buildContent({'Now playing': content}, styles);
 }
