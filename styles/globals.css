@@ -55,8 +55,11 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--base03);
   text-decoration: none;
+}
+a:hover {
+  color: var(--base0C);
 }
 
 * {

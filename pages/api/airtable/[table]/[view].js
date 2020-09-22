@@ -25,7 +25,7 @@ export default (req, res) => {
         res.setHeader('Cache-Control', 'max-age=0, s-maxage=86400')
         res.send(err);
       } else {
-        res.send({ data: media });
+        res.send(media);
       }
     });
 };

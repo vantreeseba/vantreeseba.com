@@ -1,8 +1,8 @@
 .content {
   display: grid;
   grid-auto-rows: min-content;
-  grid-template-columns: minmax(min-content,max-content) repeat(2, minmax(min-content, 1fr));
-  grid-gap: calc(var(--default-padding)/4) calc(var(--default-padding));
+  grid-template-columns: minmax(min-content,max-content) repeat(3, minmax(min-content, 1fr));
+  grid-gap: calc(var(--default-padding)/8);
 }
 
 .key, .value {
