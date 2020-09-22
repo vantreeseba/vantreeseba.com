@@ -2,7 +2,7 @@
   display: grid;
   grid-auto-rows: min-content;
   grid-template-columns: max-content auto;
-  grid-gap: calc(var(--default-padding)/4);
+  grid-gap: calc(var(--default-padding)/8);
 }
 
 .key, .value {
@@ -22,7 +22,7 @@
 }
 
 .artist {
-  color: var(--keyword-color);
+  color: var(--base0A);
 }
 
 .by {

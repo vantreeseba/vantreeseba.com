@@ -1,8 +1,8 @@
 .module {
   border: thin var(--base02) solid;
   display: grid;
-  grid-gap: calc(var(--default-padding)/2);
-  grid-template-rows: 1.25em auto 1.25em;
+  grid-gap: calc(var(--default-padding)/4);
+  grid-template-rows: min-content auto min-content;
 }
 
 .module:hover {
@@ -10,12 +10,10 @@
 }
 
 .header {
-  font-weight: bold;
-  color: var(--var-color);
+  color: var(--base0A);
   background-color: var(--bg-secondary);
   padding: 
-    0
-    calc(var(--default-padding)/2);
+    calc(var(--default-padding)/4);
 }
 
 .title2, .divider {
@@ -29,7 +27,7 @@
 .content {
   padding: 
     0
-    calc(var(--default-padding)/2);
+    calc(var(--default-padding)/4);
   padding-top: 0;
 }
 
@@ -37,5 +35,5 @@
   background-color: var(--base01);
   padding: 
     0
-    calc(var(--default-padding)/2);
+    calc(var(--default-padding)/4);
 }
