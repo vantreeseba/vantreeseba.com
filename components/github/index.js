@@ -17,14 +17,11 @@ export default function Github() {
   } else if(!data){
     content = <Loading />;
   } else {
-    content = buildContent({
-      Company: data.data.company,
-      Location: data.data.location,
-      'Public Repos': data.data.public_repos,
-      Followers: data.data.followers,
-    }, styles);
+    const {viewer} = data; 
+    console.log('GITHUB', viewer);
+    viewer.ContributedTo = viewer.ContributedTo.nodes.map(x => x.name),
+    content = buildContent(viewer, styles);
   }
-
 
   return (
     <Module 

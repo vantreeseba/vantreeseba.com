@@ -1,12 +1,32 @@
-import { Octokit } from '@octokit/rest';
-const octokit = new Octokit({ auth: process.env.GH_TOKEN });
+// import { Octokit } from '@octokit/rest';
+import { graphql } from '@octokit/graphql';
+// const octokit = new Octokit({ auth: process.env.GH_TOKEN });
+
+const github = graphql.defaults({
+  headers: {
+    authorization: `token ${process.env.GH_TOKEN}`,
+  },
+});
 
 export default async(_, res) => {
-  return octokit.request('/users/vantreeseba').then(data => {
-    res.setHeader('Cache-Control', 'max-age=0, s-maxage=86400');
-    res.send(data);
-  }).catch(err => {
-    res.status(err.status);
-    res.error(err);
-  });
+  const query = `{
+    viewer {
+      Company: company
+      Location: location
+      ContributedTo: repositoriesContributedTo
+        (first:100, includeUserRepositories: true, privacy: PUBLIC) {
+        totalCount
+        nodes {
+          name: nameWithOwner
+        }
+      }
+    }
+  }`;
+  return github(query)
+    .then(result => {
+      res.send(result);
+    }).catch(err => {
+      res.send(err);
+      console.log(err);
+    });
 };
