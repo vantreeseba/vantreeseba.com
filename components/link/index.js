@@ -12,7 +12,7 @@ function ActiveLink({ children = [], href = "", className = "" }) {
   };
 
   return (
-    <a href={href} handleClick={handleClick} className={className}>
+    <a href={href} onClick={handleClick} className={className}>
       {children}
     </a>
   );
