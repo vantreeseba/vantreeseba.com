@@ -20,7 +20,7 @@ export default function Portfolio() {
   return (
     <div className={styles.container}>
       <Header />
-      <main className={`${styles.main} ${styles.col3}`}>
+      <main className={`${styles.main} ${styles.col2}`}>
         <Module title="Goldfire Studios" span={1}>
           <div className={portfolioStyles.content}>
             <Game
@@ -54,21 +54,6 @@ export default function Portfolio() {
             />
           </div>
         </Module>
-        <Module title="Personal Games" span={1}>
-          <div className={portfolioStyles.content}>
-            <Game
-              name="Ice Breakers"
-              url="https://vantreeseba.itch.io/ice-breakers"
-              imgUrl="https://img.itch.zone/aW1nLzU0MjcxMzcucG5n/315x250%23c/7IwS%2FN.png"
-            />
-            <Game
-              name="LD40-Lumberjack"
-              url="https://vantreeseba.itch.io/ld40-lumberjack"
-              imgUrl="https://img.itch.zone/aW1hZ2UvMjAwOTQ0LzkzOTE3NS5wbmc=/315x250%23c/XFbRfw.png"
-            />
-          </div>
-        </Module>
- 
       </main>
       <Footer />
     </div>

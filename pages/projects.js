@@ -13,8 +13,7 @@ export default function Home() {
     <div className={styles.container}>
       <Header />
 
-      <main className={`${styles.main} ${styles.col3}`}>
-        <div />
+      <main className={`${styles.main} ${styles.col1}`}>
         <Github />
       </main>
 
