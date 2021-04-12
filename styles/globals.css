@@ -46,7 +46,8 @@
 }
 
 html,
-body {
+body, 
+pre {
   background-color: var(--background);
   color: var(--foreground);
   padding: 0;
@@ -54,12 +55,19 @@ body {
   font-family: monospace, Inconsolata;
 }
 
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  /* overflow-x: clip; */
+  /* overflow-wrap: break-word; */
+  /* word-wrap: break-word; */
+}
+
 a {
-  color: var(--base03);
+  color: var(--base0C);
   text-decoration: none;
 }
 a:hover {
-  color: var(--base0C);
+  color: var(--base0F);
 }
 
 * {

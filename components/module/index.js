@@ -1,22 +1,23 @@
-import styles from './index.module.css'
+import styles from "./index.module.css";
 
-const Module = ({title = 'Module', username, url, footer ='', children}) => (
-  <div className={styles.module}>
+const Module = ({
+  title = "Module",
+  username = "",
+  url = "",
+  footer = "",
+  children = [],
+  span = 1,
+}) => (
+  <div className={styles.module} style={{ "grid-column": `span ${span}` }}>
     <div className={styles.header}>
-      {title} 
-      <span className={styles.divider}>
-        {username ? ' | ' : ''}
-      </span>
+      {title}
+      <span className={styles.divider}>{username ? " | " : ""}</span>
       <a href={url} className={styles.title2}>
-        {username ? username : ''}
+        {username}
       </a>
     </div>
-    <div className={styles.content}>
-      {children}
-    </div>
-    <div className={styles.footer}>
-      {footer}
-    </div>
+    <div className={styles.content}>{children}</div>
+    <div className={styles.footer}>{footer}</div>
   </div>
 );
 

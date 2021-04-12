@@ -1,8 +1,10 @@
 .container {
-  min-height: 100vh;
   padding: 0 var(--default-padding);
   display: grid;
-  grid-template-rows: 100px auto 100px; 
+  grid-template-rows: 5vh 5vh 75vh 5vh;
+
+  min-width: 0;
+  min-height: 0;
 }
 
 .header {
@@ -10,30 +12,62 @@
   padding: var(--default-padding);
 }
 
+.headerLink {
+  place-self: start;
+  margin-right: var(--default-padding);
+}
+
 .main {
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(min-content, 1fr));
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  place-items: stretch;
-  place-content: start;
+  /* grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); */
+  /* grid-template-columns: repeat(auto-fill, 33.33%); */
+  min-width: 0;
+  min-height: 0;
+}
+
+.col2 {
+  grid-template-columns: repeat(auto-fill, 50%);
+}
+
+.col3 {
+  grid-template-columns: repeat(auto-fill, 33.33%);
+}
+
+.col4 {
+  grid-template-columns: repeat(auto-fill, 25%);
 }
 
 .footer {
+  padding: var(--default-padding);
   place-items: center;
   text-align: center;
 }
 
 @keyframes blinkingText {
-    0%{     color: var(--base00);    }
-    49%{    color: var(--base00); }
-    60%{    color: var(--base05); }
-    99%{    color: var(--base05);  }
-    100%{   color: var(--base00);    }
+  0% {
+    color: var(--base00);
+  }
+  49% {
+    color: var(--base00);
+  }
+  60% {
+    color: var(--base03);
+  }
+  99% {
+    color: var(--base03);
+  }
+  100% {
+    color: var(--base00);
+  }
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: calc(100% - 1.5em) }
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 1.5em);
+  }
 }
 
 .cursor {

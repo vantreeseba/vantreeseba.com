@@ -1,6 +1,4 @@
-// import { Octokit } from '@octokit/rest';
-import { graphql } from '@octokit/graphql';
-// const octokit = new Octokit({ auth: process.env.GH_TOKEN });
+import { graphql } from "@octokit/graphql";
 
 const github = graphql.defaults({
   headers: {
@@ -8,7 +6,7 @@ const github = graphql.defaults({
   },
 });
 
-export default async(_, res) => {
+export default async (_, res) => {
   const query = `{
     viewer {
       Company: company
@@ -23,9 +21,10 @@ export default async(_, res) => {
     }
   }`;
   return github(query)
-    .then(result => {
+    .then((result) => {
       res.send(result);
-    }).catch(err => {
+    })
+    .catch((err) => {
       res.send(err);
       console.log(err);
     });
