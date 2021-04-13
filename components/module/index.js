@@ -8,7 +8,7 @@ const Module = ({
   children = [],
   span = 1,
 }) => (
-  <div className={styles.module} style={{ "grid-column": `span ${span}` }}>
+  <div className={styles.module} style={{ "gridColumn": `span ${span}` }}>
     <div className={styles.header}>
       {title}
       <span className={styles.divider}>{username ? " | " : ""}</span>

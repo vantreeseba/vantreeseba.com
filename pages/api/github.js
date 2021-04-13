@@ -11,11 +11,15 @@ export default async (_, res) => {
     viewer {
       Company: company
       Location: location
-      ContributedTo: repositoriesContributedTo
-        (first:100, includeUserRepositories: true, privacy: PUBLIC) {
+     ContributedTo: repositoriesContributedTo(
+       first:25, 
+       includeUserRepositories: true, 
+       privacy: PUBLIC, 
+       orderBy: {field: STARGAZERS, direction: DESC}) {
         totalCount
         nodes {
           name: nameWithOwner
+          url
         }
       }
     }
