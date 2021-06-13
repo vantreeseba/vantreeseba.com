@@ -1,10 +1,11 @@
-import { useRouter } from "next/router";
-import styles from "./index.module.css";
+import { useRouter } from 'next/router';
+import styles from './index.module.css';
 
-function ActiveLink({ children = [], href = "", className = "" }) {
+function ActiveLink({ children = [], href = '', className = '' }) {
   const router = useRouter();
+
   const isCurrentLink = router.asPath === href;
-  className += isCurrentLink ? " " + styles.activeLink : "";
+  className += isCurrentLink ? ' ' + styles.activeLink : '';
 
   const handleClick = (e) => {
     e.preventDefault();

@@ -21,6 +21,9 @@ export default function Header() {
         <Link href="/portfolio" className={styles.headerLink}>
           portfolio
         </Link>
+        <Link href="/demos" className={styles.headerLink}>
+          demos
+        </Link>
       </header>
     </>
   );
