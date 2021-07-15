@@ -34,10 +34,22 @@ export default function Demos() {
         </Module>
         <Module title="Game Dev">
           <div className={portfolioStyles.content}>
-            <Link name="Realtime FSM to dot svg" url="demos/fsm" />
-            <Link name="Dungeon Generator" url="demos/dungen" />
-            <Link name="Language Generator" url="demos/langgen" />
-            <Link name="Story Generator" url="demos/storygen" />
+            <Link
+              name="Realtime FSM to dot svg"
+              url="https://dropecho.github.io/deagent.hx/fsm"
+            />
+            <Link
+              name="Dungeon Generator"
+              url="https://dropecho.github.io/dungen"
+            />
+            <Link
+              name="Language Generator"
+              url="https://dropecho.github.io/langgen?seed=0"
+            />
+            <Link
+              name="Story Generator"
+              url="https://dropecho.github.io/storygen"
+            />
           </div>
         </Module>
       </main>
@@ -45,3 +57,8 @@ export default function Demos() {
     </div>
   );
 }
+
+// <Link name="Realtime FSM to dot svg" url="demos/fsm" />
+// <Link name="Dungeon Generator" url="demos/dungen" />
+// <Link name="Language Generator" url="demos/langgen" />
+// <Link name="Story Generator" url="demos/storygen" />
