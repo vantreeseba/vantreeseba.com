@@ -1,17 +1,18 @@
-import useSWR from "swr";
+import useSWR from 'swr';
 
-import styles from "./index.module.css";
-import Module from "../module/";
-import Loading from "../loading";
+import styles from './index.module.css';
+import Module from '../module/';
+import Loading from '../loading';
 
-import { buildContent } from "../../lib/utils";
+import { buildContent } from '../../lib/utils';
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function Github({ span = 1 }) {
-  const { data, error } = useSWR("/api/github", fetcher);
+  const { data, error } = useSWR('/api/github', fetcher);
   let content;
 
+  console.log(data);
 
   if (error) {
     content = <div>Error fetching data from github.</div>;
@@ -19,7 +20,7 @@ export default function Github({ span = 1 }) {
     content = <Loading />;
   } else {
     const { viewer } = data;
-  console.log(viewer);
+    console.log(viewer);
 
     var repos = viewer.ContributedTo.nodes || [];
 

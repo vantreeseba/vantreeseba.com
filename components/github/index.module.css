@@ -2,11 +2,12 @@
   display: grid;
   grid-auto-rows: min-content;
   grid-template-columns: max-content auto;
-  grid-gap: calc(var(--default-padding)/8);
+  grid-gap: calc(var(--default-padding) / 8);
 }
 
-.key, .value {
-  padding:  calc(var(--default-padding)/8);
+.key,
+.value {
+  padding: calc(var(--default-padding) / 8);
 }
 
 .key {
@@ -19,4 +20,15 @@
 
 .value {
   color: var(--string-color);
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-gap: calc(var(--default-padding) / 4);
+  grid-column-gap: calc(var(--default-padding));
+}
+
+/* When the browser is at most 600px below */
+@media screen and (max-width: 1024px) {
+  .value {
+    grid-template-columns: max-content;
+  }
 }

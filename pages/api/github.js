@@ -20,6 +20,7 @@ export default async (_, res) => {
         nodes {
           name: nameWithOwner
           url
+          description
         }
       }
     }
