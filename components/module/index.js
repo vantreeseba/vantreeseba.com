@@ -7,9 +7,13 @@ const Module = ({
   footer = '',
   children = [],
   contentStyles = {},
-  span = 1,
+  span = 0,
+  col = 1,
 }) => (
-  <div className={styles.module} style={{ gridColumn: `span ${span}` }}>
+  <div
+    className={styles.module}
+    style={{ gridColumn: span ? `span ${span}` : `${col}` }}
+  >
     <div className={styles.header}>
       {title}
       <span className={styles.divider}>{username ? ' | ' : ''}</span>
