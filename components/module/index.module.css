@@ -13,11 +13,11 @@
 .header {
   color: var(--base0A);
   background-color: var(--bg-secondary);
-  padding: 
-    calc(var(--default-padding)/4);
+  padding: calc(var(--default-padding) / 4);
 }
 
-.title2, .divider {
+.title2,
+.divider {
   color: var(--base03);
 }
 
@@ -26,9 +26,7 @@
 }
 
 .content {
-  padding:
-    0
-    calc(var(--default-padding)/4);
+  padding: 0 calc(var(--default-padding) / 4);
   overflow-y: auto;
 }
 
@@ -50,7 +48,5 @@
 
 .footer {
   background-color: var(--base01);
-  padding: 
-    0
-    calc(var(--default-padding)/4);
+  padding: 0 calc(var(--default-padding) / 4);
 }

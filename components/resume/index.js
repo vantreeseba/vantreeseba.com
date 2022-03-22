@@ -1,46 +1,105 @@
+import styles from './index.module.css';
 import Module from '../module';
 
 export default function Resume() {
   return (
-    <pre>
-      {`
+    <div style={{ padding: '5px' }}>
+      <pre>
+        {`
 I'm a web and game developer.
 
 My main hobbies / interests are procedural generation and art, music, robotics and electronics.
-
-More info and experience ------------------------------------------
-
-Languages (High Experience):
-C#
-JS/TS/Node
-
-Languages (Completed Projects):
-Ruby, PHP, Python, GLSL/HLSL (Shaders), VimL, Lua, C++, Java, Haxe
-
-Programming Related:
-Building scalable, robust web applications using technologies such as Knockout.js, JQuery, JQuery.UI, Angular, Node, Express, WebApi2, FubuMVC, StructureMap, and NHibernate, React, Expo, Django, Rails, Vue, Vercel, Heroku.
-Mobile applications using React Native, Expo, Cordova.
-Desktop applications with Electron.
-Have implemented fast search systems using both lucene and elastisearch.
-Knowledge of SQL and NoSQL databases, GraphQL.
-Understanding of basic physics simulations, and AI applications for game development.
-Creating and Maintaining multiplayer games, supporting servers and social framework (chat, achievements) code.
-
-Electronics, robotics, machining and prototyping:
-Have implemented basic projects using arduino and esp8266.
-Basic knowledge of electronics and electrical design, PCB design with kicad.
-Prototyping physical objects with fusion 360, freecad, and creating them with cura and a 3d printer.
-Basic knowledge of CNC machine usage, and mills / lathes for machining.
-Basic knowledge of control systems, pid, kinematics (ik), kalman filters.
-
-IT related:
-Virus removal and various help-desk related tasks.
-Networking on small and large scale (1000s of clients/endpoints).
-Network monitoring using SNMP, cacti, etc.
-OSPF, BGP, RIP, and other routing techniques.
-Systems Administration for Linux (Debian) and Windows servers, including DNS, Email, web servers, and various 3rd party systems.
-Virtualization using vmware server and vmware vsphere/ESXI.
-`}
-    </pre>
+        `}
+      </pre>
+      <span className={styles.title}>Languages (High Experience):</span>
+      <ul>
+        <li>C#</li>
+        <li>JS/TS/Node</li>
+      </ul>
+      <span className={styles.title}>
+        Languages (Completed Projects using):
+      </span>
+      <ul className={styles['resume-list']}>
+        <li>GLSL/HLSL</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Haxe</li>
+        <li>Ruby</li>
+        <li>PHP</li>
+        <li>Python</li>
+        <li>Lua</li>
+      </ul>
+      <span className={styles.title}>Programming Experience:</span>
+      <ul className={styles['resume-list']}>
+        <li>Building web applications, using a number of frameworks.</li>
+        <li>Building Desktop applications using electron.</li>
+      </ul>
+      <span className={styles.title}>Web Frameworks:</span>
+      <ul className={styles['resume-list']}>
+        <li>React</li>
+        <li>Angular</li>
+        <li>JQuery/Jquery UI</li>
+        <li>Express</li>
+        <li>WebApi2</li>
+        <li>FubuMVC</li>
+        <li>StructureMap</li>
+        <li>NHibernate</li>
+        <li>Expo</li>
+        <li>Django</li>
+        <li>Rails</li>
+        <li>Vue</li>
+        <li>Vercel</li>
+      </ul>
+      <span className={styles.title}>Misc Frameworks:</span>
+      <ul className={styles['resume-list']}>
+        <li>Electron</li>
+        <li>React Native</li>
+        <li>Expo</li>
+        <li>Cordova</li>
+      </ul>
+      <span className={styles.title}>Database Experience:</span>
+      <ul className={styles['resume-list']}>
+        <li>GraphQL</li>
+        <li>Postgres</li>
+        <li>MongoDB</li>
+        <li>DynamoDB</li>
+        <li>Neo4j</li>
+        <li>Lucene</li>
+        <li>Elastisearch</li>
+      </ul>
+      <span className={styles.title}>Game development experience:</span>
+      <ul className={styles['resume-list']}>
+        <li>Basic physics simulations.</li>
+        <li>AI systems, state machines, behaviour trees, GOAP.</li>
+        <li>Creating/Maintaining multiplayer games.</li>
+        <li>Chat systems for multiplayer.</li>
+        <li>Achievement systems.</li>
+      </ul>
+      <span className={styles.title}>Electronics/Prototyping Experience:</span>
+      <ul className={styles['resume-list']}>
+        <li>Basic projects using arduino and esp8266.</li>
+        <li>Basic electrical/pcb design using kicad.</li>
+        <li>Prototyping physical objects using fusion 360, freecad.</li>
+        <li>3D printing.</li>
+        <li>Basic CNC and Manual milling, lathing.</li>
+        <li>Control systems: PID, IK, filtering (kalman).</li>
+        <li>Soldering, diagnostics.</li>
+      </ul>
+      <span className={styles.title}>IT Experience:</span>
+      <ul className={styles['resume-list']}>
+        <li>Virus removal, misc help desk related tasks.</li>
+        <li>Physical repair and maintainence of PC equipment.</li>
+        <li>Systems administration for windows and linux servers.</li>
+        <li>Maintaining DNS, Email, web and misc servers.</li>
+        <li>Vritualization technologies, VMWare/ESXI.</li>
+      </ul>
+      <span className={styles.title}>Networking Experience:</span>
+      <ul className={styles['resume-list']}>
+        <li>Large/Small network setup (1000s of clients/endpoints)</li>
+        <li>Monitoring using SNMP, cacti.</li>
+        <li>Internal device security using LDAP.</li>
+        <li>Advanced routing: OSPF, GBP, RIP.</li>
+      </ul>
+    </div>
   );
 }

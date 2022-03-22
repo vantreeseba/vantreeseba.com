@@ -1,0 +1,11 @@
+.title {
+  color: var(--base09);
+}
+
+.resume-list {
+  color: var(--base06);
+}
+
+.resume-list li::marker {
+  color: var(--base09);
+}
