@@ -23,9 +23,10 @@
     "swr": "^0.3.11"
   },
   "devDependencies": {
+    "postcss": "^8.4.12",
     "postcss-custom-properties": "^10.0.0",
     "postcss-flexbugs-fixes": "^4.2.1",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^7.4.3",
     "vercel": "^21.3.3"
   }
 }
