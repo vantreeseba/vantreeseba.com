@@ -1,28 +1,30 @@
 .content {
   display: grid;
   grid-auto-rows: min-content;
-  grid-template-columns: max-content auto;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 0.5em;
 }
 
-.key,
-.value {
-  padding: calc(var(--default-padding) / 8);
+.value img {
+  height: 10rem;
+}
+
+.line {
+  grid-column: 1 / -1;
+  height: 1px;
+  background: var(--bg-secondary);
 }
 
 .key {
   color: var(--base0E);
 }
 
-.key::after {
-  content: ":";
+.description {
+  color: var(--string-color);
 }
 
 .value {
   justify-self: end;
   text-align: right;
   color: var(--string-color);
-}
-
-img.value {
-  max-width: 95%;
 }

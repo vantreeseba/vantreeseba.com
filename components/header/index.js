@@ -15,9 +15,6 @@ export default function Header() {
         <Link href="/" className={styles.headerLink}>
           home
         </Link>
-        <Link href="/blog" className={styles.headerLink}>
-          blog-posts
-        </Link>
         <Link href="/talks" className={styles.headerLink}>
           talks
         </Link>
@@ -34,6 +31,10 @@ export default function Header() {
     </>
   );
 }
+
+//         <Link href="/blog" className={styles.headerLink}>
+//           blog-posts
+//         </Link>
 // <Link href="/demos" className={styles.headerLink}>
 //   demos
 // </Link>
