@@ -1,22 +1,35 @@
 .content {
   display: grid;
+}
+
+.content a {
+  display: grid;
   grid-auto-rows: min-content;
   grid-template-columns: 1fr 1fr;
-  grid-row-gap: 0.5em;
+  padding-top: 0.5em;
 }
 
 .value img {
   height: 10rem;
+  width: 15rem;
+  object-fit: cover;
 }
 
 .line {
   grid-column: 1 / -1;
   height: 1px;
   background: var(--bg-secondary);
+  margin-top: 0.5em;
 }
 
 .key {
+  padding-left: 0.25em;
   color: var(--base0E);
+}
+
+.content a:hover {
+  /*   color: var(--base00); */
+  background-color: var(--base01);
 }
 
 .description {
@@ -24,6 +37,7 @@
 }
 
 .value {
+  padding-right: 0.5em;
   justify-self: end;
   text-align: right;
   color: var(--string-color);
