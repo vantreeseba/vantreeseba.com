@@ -72,14 +72,14 @@ export default function Portfolio() {
         <Module title="Goldfire Studios" span={1}>
           <div className={portfolioStyles.content}>
             {GOLDFIRE_GAMES.map((x) => (
-              <Game {...x} />
+              <Game key={x.name} {...x} />
             ))}
           </div>
         </Module>
         <Module title="Personal Games" span={1}>
           <div className={portfolioStyles.content}>
             {PERSONAL_GAMES.map((x) => (
-              <Game {...x} />
+              <Game key={x.name} {...x} />
             ))}
           </div>
         </Module>

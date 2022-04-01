@@ -1,4 +1,4 @@
-import { graphql } from "@octokit/graphql";
+import { graphql } from '@octokit/graphql';
 
 const github = graphql.defaults({
   headers: {
@@ -6,25 +6,49 @@ const github = graphql.defaults({
   },
 });
 
-export default async (_, res) => {
-  const query = `{
-    viewer {
-      Company: company
-      Location: location
-     ContributedTo: repositoriesContributedTo(
-       first:25, 
-       includeUserRepositories: true, 
-       privacy: PUBLIC, 
-       orderBy: {field: STARGAZERS, direction: DESC}) {
-        totalCount
-        nodes {
-          name: nameWithOwner
-          url
-          description
+export default async (req, res) => {
+  const url = new URL(req.url, 'https://' + req.headers['host']);
+  const user = url.searchParams.get('user');
+  const org = url.searchParams.get('org');
+  const name = url.searchParams.get('name_contains');
+  const language = url.searchParams.get('coding_lang');
+
+  const query = `
+  {
+     search(
+      type: REPOSITORY,
+      query: """
+        ${user ? 'user:' + user : ''} 
+        ${org ? 'org:' + org : ''} 
+        ${name ? 'in:name ' + name : ''}
+        ${language ? 'language:' + language : ''}
+      """,
+       first: 50
+    ) {
+      edges {
+        node {
+          ... on Repository {
+            name: nameWithOwner
+            url
+            description
+            stargazerCount
+            watchers {
+              totalCount
+            }
+            issues {
+              totalCount
+            }
+            latestRelease {
+              name
+              tagName
+            }
+            pushedAt
+          }
         }
       }
     }
-  }`;
+  }
+  `;
   return github(query)
     .then((result) => {
       res.send(result);

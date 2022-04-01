@@ -2,16 +2,20 @@
   display: grid;
 }
 
-.content a {
+.content > a {
   display: grid;
   grid-auto-rows: min-content;
   grid-template-columns: 1fr 1fr;
   padding-top: 0.5em;
 }
 
+.value {
+  min-height: 5rem;
+  width: 15rem;
+}
+
 .value img {
   height: 10rem;
-  width: 15rem;
   object-fit: cover;
 }
 

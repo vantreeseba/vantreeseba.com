@@ -15,17 +15,11 @@ export default function Header() {
         <Link href="/" className={styles.headerLink}>
           home
         </Link>
-        <Link href="/talks" className={styles.headerLink}>
-          talks
-        </Link>
-        <Link href="/projects" className={styles.headerLink}>
+        <Link href="/projects_2" className={styles.headerLink}>
           projects
         </Link>
         <Link href="/portfolio" className={styles.headerLink}>
-          portfolio
-        </Link>
-        <Link href="/demos" className={styles.headerLink}>
-          demos
+          games
         </Link>
       </header>
     </>
