@@ -29,9 +29,14 @@ function Project({ name, description, url, ...details }) {
   );
 }
 
-function GithubList({ org = '', name_contains = '', coding_lang = '' }) {
+function GithubList({
+  org = '',
+  user = '',
+  name_contains = '',
+  coding_lang = '',
+}) {
   const { data, error } = useSWR(
-    ['/api/github', { org, name_contains, coding_lang }],
+    ['/api/github', { org, user, name_contains, coding_lang }],
     fetcher
   );
 
@@ -40,12 +45,14 @@ function GithubList({ org = '', name_contains = '', coding_lang = '' }) {
     content = <div>Error fetching data from github.</div>;
   } else if (!data) {
     content = <Loading />;
-  } else {
+  } else if (data?.search?.edges?.length > 0) {
     console.log(data);
     const repos = data.search.edges.map((x) => x.node);
     content = repos
       .sort((a, b) => new Date(b.pushedAt) - new Date(a.pushedAt))
       .map((x) => <Project key={x.name} {...x} />);
+  } else {
+    content = <div> No projects found. </div>;
   }
 
   return content;
@@ -73,6 +80,11 @@ export default function Portfolio() {
         <Module title="Dropecho - Haxe" span={1}>
           <div className={portfolioStyles.content}>
             <GithubList org="dropecho" coding_lang="haxe" />
+          </div>
+        </Module>
+        <Module title="Personal" span={1}>
+          <div className={portfolioStyles.content}>
+            <GithubList user="vantreeseba" />
           </div>
         </Module>
       </main>

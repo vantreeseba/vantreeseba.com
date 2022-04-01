@@ -13,6 +13,8 @@ export default async (req, res) => {
   const name = url.searchParams.get('name_contains');
   const language = url.searchParams.get('coding_lang');
 
+  console.log('user', user);
+
   const query = `
   {
      search(
