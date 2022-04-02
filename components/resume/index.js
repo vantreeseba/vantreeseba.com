@@ -4,7 +4,7 @@ import Module from '../module';
 export default function Resume() {
   return (
     <div style={{ padding: '5px' }}>
-      <pre>
+      <pre className={styles['resume-list']}>
         {`
 I'm a web and game developer.
 
@@ -12,7 +12,7 @@ My main hobbies / interests are procedural generation and art, music, robotics a
         `}
       </pre>
       <span className={styles.title}>Languages (High Experience):</span>
-      <ul>
+      <ul className={styles['resume-list']}>
         <li>C#</li>
         <li>JS/TS/Node</li>
       </ul>

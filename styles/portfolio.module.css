@@ -4,19 +4,23 @@
 
 .content > a {
   display: grid;
-  grid-auto-rows: min-content;
   grid-template-columns: 1fr 0.6fr;
   padding-top: 0.5em;
 }
 
 .value {
   min-height: 5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  justify-content: end;
+  padding-right: 0.5em;
+  color: var(--string-color);
 }
-
 .value img {
   min-height: 5rem;
   max-height: 10rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .line {
@@ -40,9 +44,7 @@
   color: var(--string-color);
 }
 
-.value {
-  padding-right: 0.5em;
-  justify-self: end;
-  text-align: right;
-  color: var(--string-color);
+.value .label {
+  text-align: left;
+  color: var(--var-color);
 }

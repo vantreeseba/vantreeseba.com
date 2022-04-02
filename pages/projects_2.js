@@ -8,11 +8,17 @@ import Module from '../components/module';
 import useSWR from 'swr';
 
 function Project({ name, description, url, ...details }) {
-  var breakName = name.split('/');
+  const breakName = name.split('/');
+  const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
+  const date = new Date(details?.pushedAt).toLocaleDateString(
+    'en-US',
+    dateOptions
+  );
+
   return (
     <a href={url}>
       <div className={portfolioStyles.key}>
-        <div>
+        <div style={{ paddingBottom: '0.25rem' }}>
           {breakName[0]}
           {'/'}
           <wbr />
@@ -21,13 +27,16 @@ function Project({ name, description, url, ...details }) {
         <div className={portfolioStyles.description}>{description}</div>
       </div>
       <div className={portfolioStyles.value}>
-        <div>
-          updated: {new Date(details?.pushedAt || 0).toLocaleDateString()}
-        </div>
-        <div>stars: {details?.stargazerCount}</div>
-        <div>issues: {details?.issues?.totalCount || 0}</div>
-        <div>watchers: {details?.watchers?.totalCount || 0}</div>
-        <div>release: {details?.latestRelease?.tagName || 'none'}</div>
+        <div className={portfolioStyles.label}>updated:</div>
+        <div>{date}</div>
+        <div className={portfolioStyles.label}>stars:</div>
+        <div>{details?.stargazerCount}</div>
+        <div className={portfolioStyles.label}>issues:</div>
+        <div>{details?.issues?.totalCount || 0}</div>
+        <div className={portfolioStyles.label}>watchers:</div>
+        <div>{details?.watchers?.totalCount || 0}</div>
+        <div className={portfolioStyles.label}>release:</div>
+        <div>{details?.latestRelease?.tagName || 'none'}</div>
       </div>
       <span className={portfolioStyles.line} />
     </a>

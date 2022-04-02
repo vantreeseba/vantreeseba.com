@@ -9,8 +9,7 @@ function Game({ name, description, url, imgUrl }) {
   return (
     <a href={url}>
       <div className={portfolioStyles.key}>
-        <div>{name}</div>
-        <br />
+        <div style={{ paddingBottom: '0.25rem' }}>{name}</div>
         <div className={portfolioStyles.description}>{description}</div>
       </div>
       <div className={portfolioStyles.value}>
