@@ -25,7 +25,7 @@ export default async (req, res) => {
         ${name ? 'in:name ' + name : ''}
         ${language ? 'language:' + language : ''}
       """,
-       first: 50
+       first: 100
     ) {
       edges {
         node {

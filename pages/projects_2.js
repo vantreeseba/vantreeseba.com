@@ -9,7 +9,7 @@ import useSWR from 'swr';
 
 function Project({ name, description, url, ...details }) {
   const breakName = name.split('/');
-  const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
+  const dateOptions = { year: '2-digit', month: '2-digit', day: '2-digit' };
   const date = new Date(details?.pushedAt).toLocaleDateString(
     'en-US',
     dateOptions

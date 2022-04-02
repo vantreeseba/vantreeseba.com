@@ -33,6 +33,7 @@
 .key {
   padding-left: 0.25em;
   color: var(--base0E);
+  overflow-wrap: anywhere;
 }
 
 .content a:hover {
