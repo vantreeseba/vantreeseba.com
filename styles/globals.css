@@ -43,6 +43,8 @@
   --color13: var(--base06);
   --color14: var(--base0F);
   --color15: var(--base07);
+
+  --break-width: 1000px;
 }
 
 html,

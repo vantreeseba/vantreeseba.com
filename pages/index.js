@@ -10,7 +10,22 @@ export default function Home() {
     <div className={styles.container}>
       <Header />
       <main className={`${styles.main} ${styles.col4}`}>
-        <img className={styles['bio-image']} src="assets/bio-image.jpg" />
+        <div className={styles.left}>
+          <img className={styles['bio-image']} src="assets/bio-image.jpg" />
+          <br />
+          <div>
+            <a href="https://twitter.com/vantreeseba">twitter</a>
+          </div>
+          <div>
+            <a href="https://github.com/vantreeseba">github</a>
+          </div>
+          <div>
+            <a href="https://soundcloud.com/vantreeseba">soundcloud</a>
+          </div>
+          <div>
+            <a href="https://vantreeseba.itch.io">itch.io</a>
+          </div>
+        </div>
         <Module title="Resume" span={2}>
           <Resume />
         </Module>
