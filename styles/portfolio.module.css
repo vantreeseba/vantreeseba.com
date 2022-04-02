@@ -13,11 +13,11 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr max-content;
-  justify-content: end;
   padding-right: 0.5em;
   color: var(--string-color);
 }
 .value img {
+  text-align: right;
   min-height: 5rem;
   max-height: 10rem;
   object-fit: contain;

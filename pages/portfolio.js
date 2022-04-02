@@ -12,7 +12,10 @@ function Game({ name, description, url, imgUrl }) {
         <div style={{ paddingBottom: '0.25rem' }}>{name}</div>
         <div className={portfolioStyles.description}>{description}</div>
       </div>
-      <div className={portfolioStyles.value}>
+      <div
+        className={portfolioStyles.value}
+        style={{ gridTemplateColumns: 'revert', justifyContent: 'end' }}
+      >
         <img className={portfolioStyles.value} src={imgUrl} />
       </div>
       <span className={portfolioStyles.line} />
