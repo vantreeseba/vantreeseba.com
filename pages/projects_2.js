@@ -8,11 +8,16 @@ import Module from '../components/module';
 import useSWR from 'swr';
 
 function Project({ name, description, url, ...details }) {
+  var breakName = name.split('/');
   return (
     <a href={url}>
       <div className={portfolioStyles.key}>
-        <div>{name}</div>
-        <br />
+        <div>
+          {breakName[0]}
+          {'/'}
+          <wbr />
+          {breakName[1]}
+        </div>
         <div className={portfolioStyles.description}>{description}</div>
       </div>
       <div className={portfolioStyles.value}>
