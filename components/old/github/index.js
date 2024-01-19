@@ -1,10 +1,10 @@
 import useSWR from 'swr';
 
 import styles from './index.module.css';
-import Module from '../module/';
+import Module from '../module';
 import Loading from '../loading';
 
-import { buildContent } from '../../lib/utils';
+import { buildContent } from '../../../lib/utils';
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 

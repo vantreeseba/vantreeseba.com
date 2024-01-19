@@ -3,6 +3,21 @@
 import Link from 'next/link';
 import { NavMenu, navigationMenuTriggerStyle } from '../ui/navigation-menu';
 
+type NavMenuNextLinkProps = {
+  href: string;
+  children?: React.ReactNode;
+};
+
+export function NavMenuNextLink({ href, children }: NavMenuNextLinkProps) {
+  return (
+    <NavMenu.Item>
+      <Link href={href} legacyBehavior passHref>
+        <NavMenu.Link className={navigationMenuTriggerStyle()}>{children}</NavMenu.Link>
+      </Link>
+    </NavMenu.Item>
+  );
+}
+
 // import { useRouter, usePathname } from 'next/navigation';
 //
 // function ActiveLink({ children = [], href = '', className = '' }) {
@@ -25,18 +40,3 @@ import { NavMenu, navigationMenuTriggerStyle } from '../ui/navigation-menu';
 // }
 //
 // export default ActiveLink;
-
-type NavMenuNextLinkProps = {
-  href: string;
-  children?: React.ReactNode;
-};
-
-export function NavMenuNextLink({ href, children }: NavMenuNextLinkProps) {
-  return (
-    <NavMenu.Item>
-      <Link href={href} legacyBehavior passHref>
-        <NavMenu.Link className={navigationMenuTriggerStyle()}>{children}</NavMenu.Link>
-      </Link>
-    </NavMenu.Item>
-  );
-}

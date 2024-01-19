@@ -1,5 +1,5 @@
 import styles from './index.module.css';
-import Module from '../module';
+import Module from '../old/module';
 
 export default function Resume() {
   return (

@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Languages (High Experience)",
+    "entries": ["C#", "JS/TS/Node"]
+  },
+  {
+    "title": "Languages (Completed Projects using)",
+    "entries": ["GLSL/HLSL", "C++", "Java", "Haxe", "Ruby", "PHP", "Python", "Lua"]
+  },
+  {
+    "title": "Programming Experience",
+    "entries": [
+      "Building web applications, using a number of frameworks.",
+      "Building Desktop applications using electron."
+    ]
+  },
+  {
+    "title": "Web Frameworks",
+    "entries": [
+      "React",
+      "Angular",
+      "JQuery/Jquery UI",
+      "Express",
+      "WebApi2",
+      "FubuMVC",
+      "StructureMap",
+      "NHibernate",
+      "Expo",
+      "Django",
+      "Rails",
+      "Vue",
+      "Vercel"
+    ]
+  },
+  {
+    "title": "Misc Frameworks",
+    "entries": ["Electron", "React Native", "Expo", "Cordova"]
+  },
+  {
+    "title": "Database Experience",
+    "entries": [
+      "GraphQL",
+      "Postgres",
+      "MongoDB",
+      "DynamoDB",
+      "Neo4j",
+      "Lucene",
+      "Elastisearch",
+      "RethinkDB"
+    ]
+  },
+  {
+    "title": "Game development experience",
+    "entries": [
+      "Basic physics simulations.",
+      "AI systems, state machines, behaviour trees, GOAP.",
+      "Creating/Maintaining multiplayer games.",
+      "Chat systems for multiplayer.",
+      "Achievement systems."
+    ]
+  },
+  {
+    "title": "Electronics/Prototyping Experience",
+    "entries": [
+      "Basic projects using arduino and esp8266.",
+      "Basic electrical/pcb design using kicad.",
+      "Prototyping physical objects using fusion 360, freecad.",
+      "3D printing.",
+      "Basic CNC and Manual milling, lathing.",
+      "Control systems: PID, IK, filtering (kalman).",
+      "Soldering, diagnostics."
+    ]
+  },
+  {
+    "title": "IT Experience",
+    "entries": [
+      "Virus removal, misc help desk related tasks.",
+      "Physical repair and maintainence of PC equipment.",
+      "Systems administration for windows and linux servers.",
+      "Maintaining DNS, Email, web and misc servers.",
+      "Vritualization technologies, VMWare/ESXI."
+    ]
+  },
+  {
+    "title": "Networking Experience",
+    "entries": [
+      "Large/Small network setup (1000s of clients/endpoints)",
+      "Monitoring using SNMP, cacti.",
+      "Internal device security using LDAP.",
+      "Advanced routing: OSPF, GBP, RIP."
+    ]
+  }
+]
