@@ -14,8 +14,16 @@ type GameProps = {
 
 function Game({ name, description, url, imgUrl }: GameProps) {
   return (
-    <Card key={name}>
-      <Image src={imgUrl} alt="" width={400} height={0} className='rounded-xl' />
+    <Card key={name} className="max-w-lg">
+      <Image
+        src={imgUrl}
+        className="rounded-t-lg"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: '100%', height: 'auto' }} // optional
+        alt={''}
+      />
       <CardHeader className="text-base0E">
         <CardTitle className="pt-2">
           <Link href={url}>{name}</Link>
