@@ -23,6 +23,23 @@ module.exports = {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        base00: 'hsl( var(--base00-hsl) )',
+        base01: 'hsl( var(--base01-hsl) )',
+        base02: 'hsl( var(--base02-hsl) )',
+        base03: 'hsl( var(--base03-hsl) )',
+        base04: 'hsl( var(--base04-hsl) )',
+        base05: 'hsl( var(--base05-hsl) )',
+        base06: 'hsl( var(--base06-hsl) )',
+        base07: 'hsl( var(--base07-hsl) )',
+        base08: 'hsl( var(--base08-hsl) )',
+        base09: 'hsl( var(--base09-hsl) )',
+        base0A: 'hsl( var(--base0A-hsl) )',
+        base0B: 'hsl( var(--base0B-hsl) )',
+        base0C: 'hsl( var(--base0C-hsl) )',
+        base0D: 'hsl( var(--base0D-hsl) )',
+        base0E: 'hsl( var(--base0E-hsl) )',
+        base0F: 'hsl( var(--base0F-hsl) )',
+
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -75,4 +92,3 @@ module.exports = {
   },
   plugins: [require('tailwindcss-animate')],
 };
-

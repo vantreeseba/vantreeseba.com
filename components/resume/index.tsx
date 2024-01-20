@@ -9,11 +9,11 @@ type SectionProps = {
 
 function Section({ title, entries }: SectionProps) {
   return (
-    <Card key={title} className="m-5">
-      <CardHeader>
+    <Card key={title}>
+      <CardHeader className="text-base0A">
         <CardTitle>{title}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="text-base0B">
         {entries.map((entry) => {
           return <li key={entry}>{entry}</li>;
         })}
@@ -24,20 +24,23 @@ function Section({ title, entries }: SectionProps) {
 
 export default function Resume() {
   return (
-    <div>
-      <Card className="m-5">
-        <CardContent>
-          <p className="pt-2">I'm a web and game developer.</p>
-          <p className="pt-2">
-            My main hobbies / interests are procedural generation and art, music, robotics and
-            electronics.
-          </p>
-        </CardContent>
-      </Card>
-
-      {sections.map((x, i) => {
-        return <Section key={i} title={x.title} entries={x.entries} />;
-      })}
-    </div>
+    <>
+      <div className="p-2">
+        <Card>
+          <CardContent className="text-base0B">
+            <p className="pt-2 typingText">I'm Ben Van Treese, a web and game developer.</p>
+            <br />
+            <p className="pt-2 line2">
+              My main interests are procedural generation, art, music, robotics and electronics.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+      <div className="grid grid-cols-3 grid-flow-row-dense gap-4 p-2 w-full">
+        {sections.map((x, i) => {
+          return <Section key={i} title={x.title} entries={x.entries} />;
+        })}
+      </div>
+    </>
   );
 }

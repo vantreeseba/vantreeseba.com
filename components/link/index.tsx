@@ -11,7 +11,7 @@ type NavMenuNextLinkProps = {
 export function NavMenuNextLink({ href, children }: NavMenuNextLinkProps) {
   return (
     <NavMenu.Item>
-      <Link href={href} legacyBehavior passHref>
+      <Link href={href} legacyBehavior passHref prefetch>
         <NavMenu.Link className={navigationMenuTriggerStyle()}>{children}</NavMenu.Link>
       </Link>
     </NavMenu.Item>
