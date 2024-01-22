@@ -1,30 +1,47 @@
 type SoundCloudTrackProps = {
-  track_id: number;
+  track_id?: number;
+  track_name: string;
 };
 
-function SoundCloudTrack({ track_id }: SoundCloudTrackProps) {
-  return (
-    <iframe
-      width="100%"
-      height="166"
-      scrolling="no"
-      frameBorder="no"
-      allow="autoplay"
-      src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${track_id}`}
-    ></iframe>
-  );
+async function getSoundcloudInfo(track_name: string) {
+  const url = 'https://soundcloud.com/oembed';
+
+  const params = new URLSearchParams({
+    format: 'json',
+    url: `https://soundcloud.com/vantreeseba/${track_name}`,
+    maxheight: '200px',
+  });
+
+  return (await fetch(url + '?' + params)).json();
 }
 
-const tracks = [
-  1594002606, //'fg-st-1'
-  1656481254, //'fg-st-2'
+async function SoundCloudTrack({ track_name }: SoundCloudTrackProps) {
+  const info = await getSoundcloudInfo(track_name);
+
+  return <div style={{ width: '45vw' }} dangerouslySetInnerHTML={{ __html: info.html }}></div>;
+}
+
+const trackNames = [
+  'chasing-neon',
+  'belly-of-the-beast',
+  'fg-st-1',
+  'fg-st-2',
+  'chillwave',
+  'winter-woods-soundtrack',
+  'vg-st-01',
+  'vg-st-02',
+  'vg-st-03',
+  'vg-st-04',
+  'chi-77-sewers',
+  'summer-party',
+  'cab-ride',
 ];
 
 export default async function Music() {
   return (
     <div className="grid grid-cols-2 gap-4">
-      {tracks.map((x) => (
-        <SoundCloudTrack track_id={x} />
+      {trackNames.map((x) => (
+        <SoundCloudTrack track_name={x} />
       ))}
     </div>
   );
