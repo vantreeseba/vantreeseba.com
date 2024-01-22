@@ -16,6 +16,11 @@ module.exports = {
         hostname: 'img.itch.zone',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        port: '',
+      },
     ],
   },
 };

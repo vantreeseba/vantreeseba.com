@@ -174,7 +174,7 @@
 
 @keyframes typing {
   to {
-    width: calc(70% - 1.5em);
+    width: calc(100% - 1.5em);
   }
 }
 
@@ -189,7 +189,7 @@
   display: inline-block;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: 0.1em;
+/*   letter-spacing: 0.1em; */
 
   width: 0;
   animation-fill-mode: forwards;
@@ -197,15 +197,5 @@
 }
 
 .line2 {
-  color: var(--class-color);
-  display: inline-block;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: 0.1em;
-  width: 0;
-
   animation: typing 2.5s steps(50, jump-none) 2s both;
-}
-.line2::after {
-  width: 100%;
 }

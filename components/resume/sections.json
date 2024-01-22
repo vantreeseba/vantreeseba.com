@@ -5,13 +5,17 @@
   },
   {
     "title": "Languages (Completed Projects using)",
-    "entries": ["GLSL/HLSL", "C++", "Java", "Haxe", "Ruby", "PHP", "Python", "Lua"]
-  },
-  {
-    "title": "Programming Experience",
     "entries": [
-      "Building web applications, using a number of frameworks.",
-      "Building Desktop applications using electron."
+      "C++",
+      "Java",
+      "Haxe",
+      "Ruby",
+      "PHP",
+      "Python",
+      "Lua",
+      "GLSL/HLSL",
+      "GDScript",
+      "GML"
     ]
   },
   {
@@ -23,8 +27,6 @@
       "Express",
       "WebApi2",
       "FubuMVC",
-      "StructureMap",
-      "NHibernate",
       "Expo",
       "Django",
       "Rails",
@@ -34,7 +36,7 @@
   },
   {
     "title": "Misc Frameworks",
-    "entries": ["Electron", "React Native", "Expo", "Cordova"]
+    "entries": ["Electron", "React Native", "Expo", "Cordova", "StructureMap", "NHibernate"]
   },
   {
     "title": "Database Experience",

@@ -10,6 +10,8 @@ export function HeaderMenu() {
         <NavMenuNextLink href="/">me</NavMenuNextLink>
         <NavMenuNextLink href="/projects">projects</NavMenuNextLink>
         <NavMenuNextLink href="/games">games</NavMenuNextLink>
+        <NavMenuNextLink href="/music">music</NavMenuNextLink>
+        <NavMenuNextLink href="/spotify">listening</NavMenuNextLink>
       </NavMenu.List>
     </NavMenu>
   );

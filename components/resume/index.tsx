@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 import sections from './sections.json';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card';
 
@@ -25,12 +27,19 @@ function Section({ title, entries }: SectionProps) {
 export default function Resume() {
   return (
     <>
-      <div className="p-2">
-        <Card>
+      <div className="p-2 grid grid-cols-3 justify-items-center">
+        <Image
+          src="/bio-image.jpg"
+          alt={'An image of Ben Van Treese.'}
+          width={200}
+          height={200}
+          className="rounded-full"
+        />
+        <Card className="col-span-2 m-0 w-full">
           <CardContent className="text-base0B">
             <p className="pt-2 typingText">I'm Ben Van Treese, a web and game developer.</p>
             <br />
-            <p className="pt-2 line2">
+            <p className="pt-2 typingText line2">
               My main interests are procedural generation, art, music, robotics and electronics.
             </p>
           </CardContent>
