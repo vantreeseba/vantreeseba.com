@@ -27,7 +27,7 @@ function Section({ title, entries }: SectionProps) {
 export default function Resume() {
   return (
     <>
-      <div className="p-2 grid grid-cols-3 justify-items-center">
+      <div className="p-2 grid lg:grid-cols-3 justify-items-center">
         <Image
           src="/bio-image.jpg"
           alt={'An image of Ben Van Treese.'}
@@ -35,7 +35,7 @@ export default function Resume() {
           height={200}
           className="rounded-full"
         />
-        <Card className="col-span-2 m-0 w-full">
+        <Card className="lg:col-span-2 m-0 lg:w-full w-screen">
           <CardContent className="text-base0B">
             <p className="pt-2 typingText">I'm Ben Van Treese, a web and game developer.</p>
             <br />
@@ -45,7 +45,7 @@ export default function Resume() {
           </CardContent>
         </Card>
       </div>
-      <div className="grid grid-cols-3 grid-flow-row-dense gap-4 p-2 w-full">
+      <div className="grid lg:grid-cols-3 grid-flow-row-dense gap-4 p-2 w-full">
         {sections.map((x, i) => {
           return <Section key={i} title={x.title} entries={x.entries} />;
         })}
