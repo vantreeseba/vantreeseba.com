@@ -39,7 +39,7 @@ async function ProjectsTable(search: GHDataInput) {
       <Card key={repo.name}>
         <CardContent className={'p-1 m-0 grid grid-cols-3'}>
           <CardHeader className="m-0 p-2 col-span-2">
-            <CardTitle className="text-lg text-accent-foreground">
+            <CardTitle className="text-sm lg:text-lg text-accent-foreground">
               <Link href={repo.url} legacyBehavior passHref>
                 {repo.name}
               </Link>
@@ -55,19 +55,19 @@ async function ProjectsTable(search: GHDataInput) {
           <div>
             <div className="grid grid-cols-2 p-0 pr-2 justify-items-end">
               <TooltipIcon Icon={Star} content="Number of users who have starred this repo." />
-              <p className="text-base0B">{repo.watchers.totalCount}</p>
+              <p className="text-base0B text-sm">{repo.watchers.totalCount}</p>
             </div>
             <div className="grid grid-cols-2 p-0 pr-2 justify-items-end">
               <TooltipIcon Icon={FileWarningIcon} content="Number of issues on this repo." />
-              <p className="text-base0B">{repo.issues.totalCount}</p>
+              <p className="text-base0B text-sm">{repo.issues.totalCount}</p>
             </div>
             <div className="grid grid-cols-2 p-0 pr-2 justify-items-end">
               <TooltipIcon Icon={TagIcon} content="Latest release tag/version." />
-              <p className="text-base0B">{repo.latestRelease?.name || 'N/A'}</p>
+              <p className="text-base0B text-sm">{repo.latestRelease?.name || 'N/A'}</p>
             </div>
             <div className="grid grid-cols-2 p-0 pr-2 justify-items-end">
               <TooltipIcon Icon={HistoryIcon} content="Last date this repo was pushed to." />
-              <p className="text-base0B">
+              <p className="text-base0B text-sm">
                 {new Date(repo?.pushedAt || '').toLocaleDateString('en-US', dateOptions)}
               </p>
             </div>
@@ -80,7 +80,7 @@ async function ProjectsTable(search: GHDataInput) {
 
 export default async function ProjectPage() {
   return (
-    <div className="grid p-4 gap-4 grid-cols-2 justify-center content-center">
+    <div className="grid p-4 gap-4 lg:grid-cols-2 justify-center content-center">
       <div className="grid gap-4">
         <ProjectsTable name="unity" />
       </div>

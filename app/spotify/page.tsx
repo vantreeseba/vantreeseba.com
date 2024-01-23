@@ -74,7 +74,7 @@ export default async function Spotify() {
       ) : null}
 
       <h1 className="text-2xl p-4">Top Tracks on Spotify</h1>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-2 gap-4">
         {top.map((x) => (
           <SpotifyTrackCard track={x} />
         ))}

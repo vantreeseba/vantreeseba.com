@@ -1,5 +1,4 @@
 type SoundCloudTrackProps = {
-  track_id?: number;
   track_name: string;
 };
 
@@ -10,6 +9,7 @@ async function getSoundcloudInfo(track_name: string) {
     format: 'json',
     url: `https://soundcloud.com/vantreeseba/${track_name}`,
     maxheight: '200px',
+    primaryColor: 'f4bf75',
   });
 
   return (await fetch(url + '?' + params)).json();
@@ -17,7 +17,6 @@ async function getSoundcloudInfo(track_name: string) {
 
 async function SoundCloudTrack({ track_name }: SoundCloudTrackProps) {
   const info = await getSoundcloudInfo(track_name);
-
   return <div style={{ width: '45vw' }} dangerouslySetInnerHTML={{ __html: info.html }}></div>;
 }
 
@@ -39,9 +38,9 @@ const trackNames = [
 
 export default async function Music() {
   return (
-    <div className="grid grid-cols-2 gap-4">
-      {trackNames.map((x) => (
-        <SoundCloudTrack track_name={x} />
+    <div className="grid lg:grid-cols-2 gap-4">
+      {trackNames.map((track_name) => (
+        <SoundCloudTrack key={track_name} track_name={track_name} />
       ))}
     </div>
   );

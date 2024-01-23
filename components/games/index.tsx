@@ -39,7 +39,7 @@ function Game({ name, description, url, imgUrl }: GameProps) {
 export default function Games() {
   return (
     <>
-      <div className="grid grid-cols-3 grid-flow-row-dense gap-4 p-2 w-full">
+      <div className="grid lg:grid-cols-3 grid-flow-row-dense gap-4 p-2 w-full">
         {sections.map((x, i) => {
           return <Game key={i} {...x} />;
         })}
