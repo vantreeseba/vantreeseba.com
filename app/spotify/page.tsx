@@ -34,6 +34,7 @@ function SpotifyTrackCard({ track }: SpotifyTrackCardProps) {
   return (
     <Card key={track.name} className="max-w-lg grid grid-cols-3">
       <Image
+        priority
         src={track.album.images[0]?.url}
         className="rounded-tl-lg"
         width={0}
@@ -43,17 +44,16 @@ function SpotifyTrackCard({ track }: SpotifyTrackCardProps) {
         alt={''}
       />
 
-      <div className="col-span-2">
-        <CardHeader className="text-base0E">
-          <CardTitle className="text-md">
-            <Link href={track.uri}>{track.name}</Link>
-          </CardTitle>
-          <CardDescription className="text-base0B">
-            <div className="col-span-2">{track.artists.map((x) => x.name).join(', ')}</div>
-            <div className="col-span-2">{track.album.name}</div>
-          </CardDescription>
-        </CardHeader>
-      </div>
+      <CardHeader className="text-base0E col-span-2">
+        <CardTitle className="text-md">
+          <Link href={track.uri}>{track.name}</Link>
+        </CardTitle>
+        <CardDescription className="text-base0B">
+          {track.artists.map((x) => x.name).join(', ')}
+          <br />
+          {track.album.name}
+        </CardDescription>
+      </CardHeader>
     </Card>
   );
 }

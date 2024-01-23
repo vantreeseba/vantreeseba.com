@@ -37,9 +37,9 @@ export default function Resume() {
         />
         <Card className="lg:col-span-2 m-0 lg:w-full w-screen">
           <CardContent className="text-base0B">
-            <p className="pt-2 typingText">I'm Ben Van Treese, a web and game developer.</p>
+            <p className="pt-2 lg:typingText">I'm Ben Van Treese, a web and game developer.</p>
             <br />
-            <p className="pt-2 typingText line2">
+            <p className="pt-2 lg:typingText lg:line2">
               My main interests are procedural generation, art, music, robotics and electronics.
             </p>
           </CardContent>
