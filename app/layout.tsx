@@ -4,6 +4,7 @@ import { HeaderMenu } from '@/components/header-menu';
 
 export const metadata = {
   title: 'vantreeseba.com',
+  viewport: 'width=device-width, initial-scale=1.0',
 };
 
 type RootLayoutProps = {
