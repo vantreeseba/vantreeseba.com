@@ -14,11 +14,11 @@
       </header>
 
       <nav class="site-nav">
-        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>home</a>
-        <a href="/projects/" {% if page.url == "/projects/" %}class="active"{% endif %}>projects</a>
-        <a href="/games/" {% if page.url == "/games/" %}class="active"{% endif %}>games</a>
-        <a href="/talks/" {% if page.url == "/talks/" %}class="active"{% endif %}>talks</a>
-        <a href="/blog/" {% if "/blog" in page.url %}class="active"{% endif %}>blog</a>
+        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>/home</a>
+        <a href="/projects" {% if page.url == "/projects" %}class="active"{% endif %}>/projects</a>
+        <a href="/games" {% if page.url == "/games" %}class="active"{% endif %}>/games</a>
+        <a href="/talks" {% if page.url == "/talks" %}class="active"{% endif %}>/talks</a>
+        <a href="/blog" {% if "/blog" in page.url %}class="active"{% endif %}>/blog</a>
       </nav>
 
       <main>
