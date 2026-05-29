@@ -1,0 +1,46 @@
+---
+layout: base.njk
+title: Games
+description: Games by Ben Van Treese
+---
+<div class="main games-grid">
+
+  <div class="module">
+    <div class="module-header">Goldfire Studios</div>
+    <div class="module-content">
+      {% for game in games.goldfire %}
+        <a href="{{ game.url }}" class="game-row">
+          <div class="game-key">
+            <div class="game-name">{{ game.name }}</div>
+            <div class="game-desc">{{ game.description }}</div>
+          </div>
+          <div class="game-img-wrap">
+            <img class="game-img" src="{{ game.imgUrl }}" alt="{{ game.name }}" />
+          </div>
+          <span class="repo-line"></span>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="module-footer"></div>
+  </div>
+
+  <div class="module">
+    <div class="module-header">Personal Games</div>
+    <div class="module-content">
+      {% for game in games.personal %}
+        <a href="{{ game.url }}" class="game-row">
+          <div class="game-key">
+            <div class="game-name">{{ game.name }}</div>
+            <div class="game-desc">{{ game.description }}</div>
+          </div>
+          <div class="game-img-wrap">
+            <img class="game-img" src="{{ game.imgUrl }}" alt="{{ game.name }}" />
+          </div>
+          <span class="repo-line"></span>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="module-footer"></div>
+  </div>
+
+</div>

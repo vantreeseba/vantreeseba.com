@@ -1,0 +1,32 @@
+[
+  {
+    "name": "AI Techniques",
+    "url": "https://www.youtube.com/watch?v=KWOxsm0K0Hk",
+    "description": "An intro talk about pathfinding, steering behaviors, FSMs and GOAP."
+  },
+  {
+    "name": "Intro to ES6",
+    "url": "https://www.youtube.com/watch?v=45prOYKXmMs",
+    "description": "An introduction to ES6 features for freeCodeCamp OKC."
+  },
+  {
+    "name": "WebGL and Shaders",
+    "url": "https://www.youtube.com/watch?v=s3YZowkL0Fw",
+    "description": "A short talk on how to make a laser like thing in WebGL."
+  },
+  {
+    "name": "An intro to Node.js",
+    "url": "https://www.youtube.com/watch?v=XdpjKtptGz4",
+    "description": ""
+  },
+  {
+    "name": "Intro to WebGL/Shaders",
+    "url": "https://www.youtube.com/watch?v=h9mZMyGQu8o",
+    "description": ""
+  },
+  {
+    "name": "How I Prototype (UI/Web)",
+    "url": "https://www.youtube.com/watch?v=MDStyY3dR88",
+    "description": ""
+  }
+]

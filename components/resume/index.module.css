@@ -1,8 +1,0 @@
-.title,
-.resume-list li::marker {
-  color: var(--base0A);
-}
-
-.resume-list {
-  color: var(--string-color);
-}

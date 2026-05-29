@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Talks
+description: Talks by Ben Van Treese
+---
+<div class="main col1">
+
+  <div class="module">
+    <div class="module-header">talks</div>
+    <div class="module-content">
+      {% for talk in talks %}
+        <a href="{{ talk.url }}" class="talk-row">
+          <span class="talk-name">{{ talk.name }}</span>
+          {% if talk.description %}<span class="talk-desc">{{ talk.description }}</span>{% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>

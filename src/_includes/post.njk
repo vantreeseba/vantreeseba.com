@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+<div class="main col1">
+  <article class="module post">
+    <div class="module-header">
+      {{ title }}
+      <span class="module-divider"> | </span>
+      <time class="post-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+    </div>
+    <div class="module-content post-content">
+      {% if description %}
+        <p class="post-description">{{ description }}</p>
+      {% endif %}
+      {% if tags %}
+        <div class="post-tags">
+          {% for tag in tags %}
+            {% if tag != "post" %}
+              <span class="post-tag">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="post-body">
+        {{ content | safe }}
+      </div>
+    </div>
+  </article>
+</div>

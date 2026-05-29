@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+    <meta name="description" content="{{ description or site.tagline }}" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        {{ site.name }}
+      </header>
+
+      <nav class="site-nav">
+        <a href="/" {% if page.url == "/" %}class="active"{% endif %}>home</a>
+        <a href="/projects/" {% if page.url == "/projects/" %}class="active"{% endif %}>projects</a>
+        <a href="/games/" {% if page.url == "/games/" %}class="active"{% endif %}>games</a>
+        <a href="/talks/" {% if page.url == "/talks/" %}class="active"{% endif %}>talks</a>
+        <a href="/blog/" {% if "/blog" in page.url %}class="active"{% endif %}>blog</a>
+      </nav>
+
+      <main>
+        {{ content | safe }}
+      </main>
+
+      <footer class="site-footer">
+        <span class="status-path">{{ page.url }}</span>
+        <span class="status-sep"> | </span>
+        <a href="https://github.com/vantreeseba/vantreeseba.com">github</a>
+        <span class="status-sep"> | </span>
+        <span>© {% year %}</span>
+      </footer>
+    </div>
+  </body>
+</html>

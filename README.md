@@ -1,30 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# vantreeseba.com
 
-## Getting Started
+Personal site for Ben Van Treese. Built with [Eleventy](https://www.11ty.dev/).
 
-First, run the development server:
+## Setup
+
+```bash
+npm install
+```
+
+Set a GitHub personal access token so project data is fetched at build time:
+
+```bash
+export GH_TOKEN=your_token_here
+```
+
+Without it the projects page will render with empty lists.
+
+## Dev
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Starts Eleventy's dev server at [http://localhost:3000](http://localhost:3000) with live reload.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Build
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Output goes to `_site/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+src/
+  _data/
+    site.js         # site metadata (name, links)
+    projects.js     # async — fetches GitHub repos at build time
+    games.json      # static game data
+    talks.json      # static talks list
+  _includes/
+    base.njk        # base layout
+  css/
+    styles.css
+  assets/
+  index.njk
+  projects.njk
+  games.njk
+  talks.njk
+```
 
-## Deploy on Vercel
+## Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Projects** — pulled live from GitHub at build time via `GH_TOKEN`. Queries dropecho (Unity + Haxe) and personal repos.
+- **Games** — edit `src/_data/games.json`.
+- **Talks** — edit `src/_data/talks.json`.

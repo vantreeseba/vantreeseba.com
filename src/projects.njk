@@ -1,0 +1,110 @@
+---
+layout: base.njk
+title: Projects
+description: GitHub projects by Ben Van Treese
+---
+<div class="main col2">
+
+  <div class="module">
+    <div class="module-header">
+      Dropecho — Unity
+      <span class="module-divider"> | </span>
+      <a href="https://github.com/dropecho" class="module-link">@dropecho</a>
+    </div>
+    <div class="module-content">
+      {% if projects.dropechoUnity.length %}
+        {% for repo in projects.dropechoUnity %}
+          <a href="{{ repo.url }}" class="repo-row">
+            <div class="repo-key">
+              <div class="repo-name">{{ repo.name }}</div>
+              {% if repo.description %}<div class="repo-desc">{{ repo.description }}</div>{% endif %}
+            </div>
+            <div class="repo-val">
+              <div class="repo-label">updated:</div>
+              <div>{{ repo.pushedAt | truncate(10, false, "") }}</div>
+              <div class="repo-label">stars:</div>
+              <div>{{ repo.stargazerCount }}</div>
+              <div class="repo-label">issues:</div>
+              <div>{{ repo.issues.totalCount or 0 }}</div>
+              <div class="repo-label">release:</div>
+              <div>{{ repo.latestRelease.tagName if repo.latestRelease else "none" }}</div>
+            </div>
+            <span class="repo-line"></span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <div class="empty">No projects found.</div>
+      {% endif %}
+    </div>
+    <div class="module-footer"></div>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      Dropecho — Haxe
+      <span class="module-divider"> | </span>
+      <a href="https://github.com/dropecho" class="module-link">@dropecho</a>
+    </div>
+    <div class="module-content">
+      {% if projects.dropechoHaxe.length %}
+        {% for repo in projects.dropechoHaxe %}
+          <a href="{{ repo.url }}" class="repo-row">
+            <div class="repo-key">
+              <div class="repo-name">{{ repo.name }}</div>
+              {% if repo.description %}<div class="repo-desc">{{ repo.description }}</div>{% endif %}
+            </div>
+            <div class="repo-val">
+              <div class="repo-label">updated:</div>
+              <div>{{ repo.pushedAt | truncate(10, false, "") }}</div>
+              <div class="repo-label">stars:</div>
+              <div>{{ repo.stargazerCount }}</div>
+              <div class="repo-label">issues:</div>
+              <div>{{ repo.issues.totalCount or 0 }}</div>
+              <div class="repo-label">release:</div>
+              <div>{{ repo.latestRelease.tagName if repo.latestRelease else "none" }}</div>
+            </div>
+            <span class="repo-line"></span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <div class="empty">No projects found.</div>
+      {% endif %}
+    </div>
+    <div class="module-footer"></div>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      Personal
+      <span class="module-divider"> | </span>
+      <a href="{{ site.github }}" class="module-link">@vantreeseba</a>
+    </div>
+    <div class="module-content">
+      {% if projects.personal.length %}
+        {% for repo in projects.personal %}
+          <a href="{{ repo.url }}" class="repo-row">
+            <div class="repo-key">
+              <div class="repo-name">{{ repo.name }}</div>
+              {% if repo.description %}<div class="repo-desc">{{ repo.description }}</div>{% endif %}
+            </div>
+            <div class="repo-val">
+              <div class="repo-label">updated:</div>
+              <div>{{ repo.pushedAt | truncate(10, false, "") }}</div>
+              <div class="repo-label">stars:</div>
+              <div>{{ repo.stargazerCount }}</div>
+              <div class="repo-label">issues:</div>
+              <div>{{ repo.issues.totalCount or 0 }}</div>
+              <div class="repo-label">release:</div>
+              <div>{{ repo.latestRelease.tagName if repo.latestRelease else "none" }}</div>
+            </div>
+            <span class="repo-line"></span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <div class="empty">No projects found.</div>
+      {% endif %}
+    </div>
+    <div class="module-footer"></div>
+  </div>
+
+</div>

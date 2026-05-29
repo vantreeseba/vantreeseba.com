@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: Blog
+description: Posts by Ben Van Treese
+---
+<div class="main col1">
+  <div class="module">
+    <div class="module-header">posts</div>
+    <div class="module-content">
+      {% set posts = collections.post | reverse %}
+      {% if posts.length %}
+        {% for post in posts %}
+          <a href="{{ post.url }}" class="repo-row post-row">
+            <div class="repo-key">
+              <div class="repo-name">{{ post.data.title }}</div>
+              {% if post.data.description %}
+                <div class="repo-desc">{{ post.data.description }}</div>
+              {% endif %}
+            </div>
+            <div class="post-meta">
+              <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+            </div>
+            <span class="repo-line"></span>
+          </a>
+        {% endfor %}
+      {% else %}
+        <div class="empty">No posts yet.</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
