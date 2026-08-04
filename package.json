@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "dotenv -- eleventy --serve",
     "build": "eleventy",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "new-post": "node scripts/new-post.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
