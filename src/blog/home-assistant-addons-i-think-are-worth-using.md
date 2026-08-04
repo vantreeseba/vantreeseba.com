@@ -17,13 +17,13 @@ Here are a few that I think are worth looking at.
 
 ## Lighting
 
-#### Magic Areas
+#### [ Magic Areas ](https://magicareas.io/)
 
 This one is pretty awesome, it basically will auto set up motion/presence based lighting around your house.
 It also includes some nice "sensor merging" where you can use multiple temperature sensors and etc, merging them at the
 room/floor/house level.
 
-#### Adaptive Lighting
+#### [Adaptive Lighting](https://adaptive-lighting.nijho.lt/)
 
 This one will auto set light temperature based on a lot of fancy rules, but you don't have to think about most of them.
 You want dimmer, warm lights at night, and brighter ones during the day?  Install it and go.
